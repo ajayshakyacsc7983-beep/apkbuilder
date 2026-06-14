@@ -17,14 +17,14 @@
                             }
 
                             val titleView = TextView(this).apply {
-                                text = "🚀 tac"
+                                text = "🚀 MyAwesomeApp"
                                 textSize = 28f
                                 setTextColor(android.graphics.Color.parseColor("#8B5CF6"))
                                 gravity = Gravity.CENTER
                             }
 
                             val descView = TextView(this).apply {
-                                text = "Prompt implementation: ek tictactoi game banayo usaka ui home page sab badiya ho
+                                text = "Prompt implementation: ek tectactoi game banayo
 Features and platform logic integrated for ."
                                 textSize = 16f
                                 gravity = Gravity.CENTER
