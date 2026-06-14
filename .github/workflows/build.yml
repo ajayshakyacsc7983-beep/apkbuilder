@@ -4,6 +4,9 @@ on:
   push:
     branches: [ "main" ]
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,6 +19,12 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: gradle
+
+    - name: Generate Gradle Wrapper (if missing)
+      run: |
+        if [ ! -f "gradlew" ]; then
+          gradle wrapper
+        fi
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
